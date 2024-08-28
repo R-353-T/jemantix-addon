@@ -1,6 +1,6 @@
 #jemantix-navigation-button {
-    @apply fixed top-4 left-4 bg-no-repeat rounded-full;
-    background-image: url("asset/icon/png/grid.png");
+    @apply fixed top-4 left-4 bg-no-repeat rounded z-250;
+    background-image: url("asset/icon/png/grid-dark.png");
     background-size: 32px;
     background-position: center center;
 
@@ -11,17 +11,17 @@
 }
 
 #jemantix-navigation-button,
+#jemantix-navigation-tabs div a,
 #jemantix-navigation nav.menu a {
-    @apply w-16 h-16 duration-300;
-    background-color: rgba(255, 255, 255, 0.05);
+    @apply w-10 h-10 duration-300 bg-white text-primary-950;
 
     &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
+        @apply opacity-80;
     }
 }
 
 #jemantix-navigation {
-    @apply fixed top-24 left-4 hidden gap-4;
+    @apply fixed top-16 left-4 hidden gap-4 z-250;
     animation: 300ms fadeInDown linear both;
 
     &.jemantix-active {
@@ -32,15 +32,47 @@
         @apply flex flex-col p-0 m-0 gap-0;
 
         a {
-            @apply m-0 flex justify-center items-center text-white;
+            @apply m-0 flex justify-center items-center;
             text-shadow: none;
 
             &:first-child {
-                @apply rounded-t-full;
+                @apply rounded-t;
             }
 
             &#cloud-button {
-                @apply rounded-b-full;
+                @apply rounded-b;
+            }
+        }
+    }
+}
+
+#jemantix-navigation-tabs {
+    @apply fixed top-4 left-16 hidden gap-4 z-250;
+    
+    &.jemantix-active {
+        @apply flex;
+    }
+
+    div {
+        a {
+            @apply flex px-4 justify-center items-center w-auto
+            shadow-none uppercase tracking-wider text-primary-950;
+            text-shadow: none;
+    
+            &:first-child {
+                @apply rounded-l rounded-r-none;
+            }
+    
+            &:last-child {
+                @apply rounded-r rounded-l-none;
+            }
+
+            &.active {
+                @apply underline;
+            }
+
+            &.inactive {
+                @apply opacity-100;
             }
         }
     }

@@ -1,0 +1,88 @@
+
+#cemantix-game {
+
+    #cemantix-success {
+        @apply bg-green-700 shadow-none rounded-none m-0 p-4
+        rounded;
+        margin-bottom: 8px !important;
+    }
+
+    #cemantix-form {
+        @apply flex flex-wrap m-0 p-0;
+
+        .guessbox {
+            @apply flex m-0 p-0 flex-grow;
+
+            input { @apply w-full; }
+
+        }
+
+        input {
+            @apply h-10 px-4 m-0 rounded-none border border-white rounded-l;
+            background-color: rgba(255, 255, 255, 0.05);
+
+            &:focus-visible {
+                @apply outline-none;
+            }
+
+            &[type=submit] {
+                @apply uppercase cursor-pointer duration-300 border-l-0
+                rounded-l-none rounded-r;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
+
+        #cemantix-error {
+            @apply w-full bg-yellow text-black m-0 px-4;
+            line-height: 48px;
+    
+            i {
+                @apply text-red;
+                font-style: normal;
+            }
+        }
+    }
+
+    table#cemantix-guessable {
+        @apply flex flex-col m-0 w-full;
+
+        thead {
+            @apply shadow-none;
+
+            th {
+                @apply p-2 text-left;
+            }
+        }
+
+        tr {
+            @apply grid;
+            grid-template-columns: 48px 1fr 96px 48px 96px 128px;
+        }
+
+        td {
+            @apply px-2 text-left;
+        
+            &.number {
+                @apply font-bold;
+            }
+
+            &:last-child {
+                @apply flex items-center justify-center;
+            }
+
+            .progress-container {
+                @apply flex  bg-transparent border border-white shadow-none h-4
+                rounded !important;
+                padding: 1px;
+
+                .progress-bar {
+                    @apply flex items-center justify-end text-primary-950 text-xs
+                    rounded-sm text-right;
+                    background-image: linear-gradient(to right, #ffffff, #ffffff) !important;
+                }
+            }
+        }
+    }
+}

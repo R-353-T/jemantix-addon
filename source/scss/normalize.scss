@@ -1,9 +1,16 @@
 body {
+    @apply pb-8;
+
     aside.aside,
-    article.main,
     footer.footer {
         @apply hidden;
     }
+}
+
+#dialog-underlay {
+    @apply z-280;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: 300ms fadeIn linear both;
 }
 
 #dialog {
@@ -11,17 +18,17 @@ body {
     shadow-none bg-transparent;
 
     #dialog-close {
-        @apply bg-white text-transparent rounded-full w-16 h-16
+        @apply bg-white text-transparent rounded w-10 h-10
         flex justify-center items-center text-3xl bg-no-repeat
-        fixed top-4 right-4;
+        fixed top-4 right-4
+        duration-300 hover:bg-white hover:opacity-70;
         background-image: url("asset/icon/png/close-dark.png");
         background-position: center center;
         background-size: 32px;
     }
 
     .dialog-content {
-        @apply text-base text-start rounded;
-        background-color: rgba(255, 255, 255, 0.05);
+        @apply text-base text-start rounded border-2 border-dashed border-white;
 
         h3 {
             @apply text-2xl;
@@ -29,7 +36,7 @@ body {
 
         input,
         button {
-            @apply border-0 p-2 px-4 rounded-full duration-300;
+            @apply border-0 p-2 px-4 rounded-full duration-300 flex items-center;
             background-color: rgba(255, 255, 255, 0.05);
         }
 
@@ -41,5 +48,17 @@ body {
         button#signin:hover {
             background-color: rgba(255, 255, 255, 0.2);
         }
+
+        a {
+            @apply underline hover:no-underline text-primary-300;
+        }
+    }
+}
+
+article.main {
+    @apply flex absolute top-16 left-16 bottom-4 right-4 overflow-auto bg-transparent m-0;
+
+    #content {
+        @apply flex flex-col m-0 p-0 w-full shadow-none overflow-auto gap-2 rounded bg-primary-950;
     }
 }
