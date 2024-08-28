@@ -11,20 +11,22 @@
   "author": "R353T_",
   "license": "Apache-2.0",
   "scripts": {
+    "dev": "npx nodemon --config ./configuration/nodemon.json",
     "build": "npm run lint && npm run webpack && npm run postcss",
     "generate:manifest": "node ./bin/generate-manifest.js",
-
+    "deploy:asset": "cp -r ./source/asset ./dist/chrome && cp -r ./source/asset ./dist/firefox",
     "webpack": "npx webpack build --config ./configuration/webpack.config.js",
     "lint": "npx eslint --config ./configuration/eslint.config.js --fix",
     "postcss": "npm run postcss:firefox && npm run postcss:chrome",
     "postcss:firefox": "npx postcss ./source/index.scss -o ./dist/firefox/index.min.css --config ./configuration/postcss.config.js",
-    "postcss:chrome": "npx postcss ./source/index.scss -o ./dist/chrome/index.min.css --config ./configuration/postcss.config.js"    
+    "postcss:chrome": "npx postcss ./source/index.scss -o ./dist/chrome/index.min.css --config ./configuration/postcss.config.js"
   },
   "devDependencies": {
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.5",
     "eslint": "^9.9.1",
+    "nodemon": "^3.1.4",
     "postcss": "^8.4.41",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
