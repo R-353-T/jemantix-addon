@@ -11,12 +11,14 @@
   "author": "R353T_",
   "license": "Apache-2.0",
   "scripts": {
+    "build": "npm run lint && npm run webpack && npm run postcss",
+    "generate:manifest": "node ./bin/generate-manifest.js",
+
     "webpack": "npx webpack build --config ./configuration/webpack.config.js",
     "lint": "npx eslint --config ./configuration/eslint.config.js --fix",
     "postcss": "npm run postcss:firefox && npm run postcss:chrome",
     "postcss:firefox": "npx postcss ./source/index.scss -o ./dist/firefox/index.min.css --config ./configuration/postcss.config.js",
-    "postcss:chrome": "npx postcss ./source/index.scss -o ./dist/chrome/index.min.css --config ./configuration/postcss.config.js",
-    "generate:manifest": "node ./bin/generate-manifest.js"
+    "postcss:chrome": "npx postcss ./source/index.scss -o ./dist/chrome/index.min.css --config ./configuration/postcss.config.js"    
   },
   "devDependencies": {
     "animate.css": "^4.1.1",
