@@ -1,0 +1,28 @@
+{
+    "author": "R353T_",
+    "browser_action": { "browser_style": false },
+    "content_scripts": {
+        "matches": ["https://*.certitudes.org/*"],
+        "css": ["index.min.css"],
+        "js": ["index.min.js"],
+        "run_at": "document_start"
+    },
+    "description": "{{DESCRIPTION}}",
+    "developer": {
+        "name": "Adrien Villalonga",
+        "url": "r353t.net"
+    },
+    "homepage_url": "https://jemantix.r353t.net",
+    "icons": {
+        "48": "icon-48x48.png",
+        "96": "icon-96x96.png",
+        "128": "icon-128x128.png",
+        "512": "icon-512x512.png"
+    },
+    "manifest_version": 2,
+    "name": "Jemantix",
+    "offline_enabled": true,
+    "short_name": "Jemantix",
+    "version": "{{VERSION}}",
+    "web_accessible_resources": []
+}
