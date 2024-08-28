@@ -1,0 +1,45 @@
+body {
+    aside.aside,
+    article.main,
+    footer.footer {
+        @apply hidden;
+    }
+}
+
+#dialog {
+    @apply flex flex-col h-screen justify-center items-center m-0 mx-auto
+    shadow-none bg-transparent;
+
+    #dialog-close {
+        @apply bg-white text-transparent rounded-full w-16 h-16
+        flex justify-center items-center text-3xl bg-no-repeat
+        fixed top-4 right-4;
+        background-image: url("asset/icon/png/close-dark.png");
+        background-position: center center;
+        background-size: 32px;
+    }
+
+    .dialog-content {
+        @apply text-base text-start rounded;
+        background-color: rgba(255, 255, 255, 0.05);
+
+        h3 {
+            @apply text-2xl;
+        }
+
+        input,
+        button {
+            @apply border-0 p-2 px-4 rounded-full duration-300;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        button {
+            @apply flex gap-4;
+        }
+
+        input[type=submit]:hover,
+        button#signin:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+}

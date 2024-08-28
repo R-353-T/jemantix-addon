@@ -1,0 +1,47 @@
+#jemantix-navigation-button {
+    @apply fixed top-4 left-4 bg-no-repeat rounded-full;
+    background-image: url("asset/icon/png/grid.png");
+    background-size: 32px;
+    background-position: center center;
+
+    &.jemantix-active {
+        @apply bg-white hover:bg-white hover:opacity-70 !important;
+        background-image: url("asset/icon/png/close-dark.png");
+    }
+}
+
+#jemantix-navigation-button,
+#jemantix-navigation nav.menu a {
+    @apply w-16 h-16 duration-300;
+    background-color: rgba(255, 255, 255, 0.05);
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+#jemantix-navigation {
+    @apply fixed top-24 left-4 hidden gap-4;
+    animation: 300ms fadeInDown linear both;
+
+    &.jemantix-active {
+        @apply flex;
+    }
+
+    nav.menu {
+        @apply flex flex-col p-0 m-0 gap-0;
+
+        a {
+            @apply m-0 flex justify-center items-center text-white;
+            text-shadow: none;
+
+            &:first-child {
+                @apply rounded-t-full;
+            }
+
+            &#cloud-button {
+                @apply rounded-b-full;
+            }
+        }
+    }
+}

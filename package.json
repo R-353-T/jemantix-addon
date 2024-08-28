@@ -12,7 +12,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "dev": "npx nodemon --config ./configuration/nodemon.json",
-    "build": "npm run lint && npm run webpack && npm run postcss",
+    "build": "npm run lint && npm run webpack && npm run postcss && npm run generate:manifest",
     "generate:manifest": "node ./bin/generate-manifest.js",
     "deploy:asset": "cp -r ./source/asset ./dist/chrome && cp -r ./source/asset ./dist/firefox",
     "webpack": "npx webpack build --config ./configuration/webpack.config.js",
