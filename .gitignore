@@ -1,0 +1,7 @@
+node_modules
+
+dist/firefox/**
+!dist/firefox/.gitkeep
+
+dist/chrome/**
+!dist/chrome/.gitkeep
