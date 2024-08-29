@@ -67,9 +67,9 @@
         @apply flex gap-2;
 
         a {
-            @apply flex px-4 justify-center items-center w-auto
+            @apply flex px-2 justify-center items-center w-auto
             shadow-none uppercase tracking-wider opacity-100
-            bg-transparent;
+            bg-transparent text-xs;
             text-shadow: none;
 
             &.active {
@@ -80,9 +80,9 @@
 
     .yesterday {
         @apply flex justify-center items-center
-        h-10 text-primary-950 bg-white m-0 rounded shadow-none p-0 px-2 max-w-36 flex-wrap
+        h-10 text-primary-950 bg-white m-0 rounded shadow-none p-0 px-1 max-w-36 flex-wrap
         font-bold gap-0 uppercase;
-        font-size: 10px;
+        font-size: 9px;
         background-image:none;
 
         a {

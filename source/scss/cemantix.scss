@@ -50,7 +50,7 @@
             @apply shadow-none;
 
             th {
-                @apply px-2 h-7 text-left;
+                @apply p-2 text-left;
             }
         }
 
@@ -84,6 +84,10 @@
                 @apply shadow-none rounded-none;
                 background-color: rgba(255, 255, 255, 0.2);
             }
+
+            &:last-child {
+                @apply border-b-0;
+            }
         }
 
         td {
@@ -106,6 +110,42 @@
                     @apply flex items-center justify-end text-primary-950 text-xs
                     rounded-sm text-right;
                     background-image: linear-gradient(to right, #ffffff, #ffffff) !important;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 562px) {
+    #cemantix-game {
+        table#cemantix-guessable {
+
+            thead tr {
+                th,
+                td {
+                    @apply text-sm;
+                }
+
+                &#cemantix-guessed {
+                    @apply h-auto;
+                }
+            }
+
+            tr {
+                @apply grid border-b border-white;
+                grid-template-columns: 24px 1fr 48px 24px 32px 96px;
+
+                td {
+                    @apply text-xs px-0 text-center;
+
+                    &.word {
+                        @apply text-left px-2;
+                    }
+
+                    &:last-child {
+                        @apply px-2
+                    }
                 }
             }
         }

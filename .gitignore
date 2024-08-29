@@ -5,3 +5,6 @@ dist/firefox/**
 
 dist/chrome/**
 !dist/chrome/.gitkeep
+
+.TODO
+*.zip
