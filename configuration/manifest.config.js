@@ -2,7 +2,7 @@
 const ManifestConfiguration = {
 
     description: 'Cémantix/Pédantix ergonomics and features upgrade (https://cemantix.certitudes.org/)',
-    version: '3.0.0',
+    version: '3.0.1',
     web_accessible_resources: [
         'asset/icon/png/close.png',
         'asset/icon/png/close-dark.png',
