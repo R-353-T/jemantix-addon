@@ -72,3 +72,29 @@
         }
     }
 }
+
+#pedantix-guessable {
+    @apply flex flex-col m-0 w-full border border-white rounded-sm mb-2;
+
+    thead {
+        @apply shadow-none bg-white text-primary-950 rounded-none;
+        background-image: none;
+
+        th {
+            @apply px-2 h-7 text-left;
+        }
+    }
+
+    tr {
+        @apply grid border-b border-white;
+        grid-template-columns: 48px 1fr 48px;
+        
+        &:last-child {
+            @apply border-0;
+        }
+    }
+
+    td {
+        @apply text-xs font-bold tracking-widest px-2 py-1;
+    }
+}

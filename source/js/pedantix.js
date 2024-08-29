@@ -101,6 +101,8 @@ export function refreshPedantixSpanStyle() {
     const spanArray = CEMANTIX_DOM.pedantixSpanArray();
     console.log(`${spanArray.length} updated`);
 
+    /** @todo fix low connection issue (wait latest XHR) */
+
     for (const span of spanArray) {
         setTimeout(() => {
             pedantixSpanFound(span);

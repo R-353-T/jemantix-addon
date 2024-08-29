@@ -4,8 +4,14 @@ export const CEMANTIX_DOM = {
     cemantixButton: () => document.querySelector('a#cemantix'),
     pedantixButton: () => document.querySelector('a#pedantix'),
     cemantixSuccess: () => document.querySelector('#cemantix-success'),
+
     pedantixSpanArray: () => [...document.querySelectorAll('#wiki span:not(.jemantix-found)')],
-    pedantixForm: () => document.querySelector('#pedantix-form')
+    pedantixForm: () => document.querySelector('#pedantix-form'),
+    pedantixGame: () => document.querySelector('#pedantix-game'),
+    pedantixGuessable: () => document.querySelector('#pedantix-guessable'),
+
+    pedantixYesterday: () => document.querySelector('#pedantix-summary .yesterday'),
+    cemantixYesterday: () => document.querySelector('#cemantix-summary .yesterday')
 };
 
 export const JEMANTIX_DOM = {
@@ -87,6 +93,8 @@ export function addNavigation() {
 
     navigation.appendChild(CEMANTIX_DOM.menu());
     navigationTabs.appendChild(CEMANTIX_DOM.tabs());
+    navigationTabs.appendChild(CEMANTIX_DOM.cemantixYesterday());
+    navigationTabs.appendChild(CEMANTIX_DOM.pedantixYesterday());
 
     JEMANTIX_DOM.body().appendChild(navigation);
     JEMANTIX_DOM.body().appendChild(navigationTabs);
@@ -95,3 +103,10 @@ export function addNavigation() {
     navigationButton.addEventListener('click', toggleNavigation);
 }
 
+/** **********************************************/
+/** Pedantix                                    **/
+/** **********************************************/
+
+export function setupPedantix() {
+    CEMANTIX_DOM.pedantixGame().insertBefore(CEMANTIX_DOM.pedantixGuessable(), CEMANTIX_DOM.pedantixGame().firstChild);
+}
