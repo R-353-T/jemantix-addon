@@ -6,7 +6,7 @@ const distDirectory = path.join(rootDirectory, 'dist');
 const entry = path.join(rootDirectory, 'source', 'index.js');
 
 const webpackDefault = {
-    mode: 'development',
+    mode: 'production',
     resolve: { extensions: ['.js'] }
 };
 
