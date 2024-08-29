@@ -1,27 +1,26 @@
 #jemantix-navigation-button {
-    @apply fixed top-4 left-4 bg-no-repeat rounded z-250;
-    background-image: url("asset/icon/png/grid-dark.png");
+    @apply fixed top-2 left-2 bg-no-repeat z-250;
+    background-image: url("asset/icon/png/grid.png");
     background-size: 32px;
     background-position: center center;
 
     &.jemantix-active {
-        @apply bg-white hover:bg-white hover:opacity-70 !important;
-        background-image: url("asset/icon/png/close-dark.png");
+        background-image: url("asset/icon/png/close.png");
     }
 }
 
 #jemantix-navigation-button,
 #jemantix-navigation-tabs div a,
 #jemantix-navigation nav.menu a {
-    @apply w-10 h-10 duration-300 bg-white text-primary-950;
+    @apply w-10 h-10 duration-300 border border-white text-white rounded;
 
     &:hover {
-        @apply opacity-80;
+        @apply opacity-50;
     }
 }
 
 #jemantix-navigation {
-    @apply fixed top-16 left-4 hidden gap-4 z-250;
+    @apply fixed top-14 left-2 hidden gap-4 z-250;
     animation: 300ms fadeInDown linear both;
 
     &.jemantix-active {
@@ -29,7 +28,7 @@
     }
 
     nav.menu {
-        @apply flex flex-col p-0 m-0 gap-0;
+        @apply flex flex-col p-0 m-0 gap-0 gap-2;
 
         a {
             @apply m-0 flex justify-center items-center;
@@ -43,36 +42,38 @@
                 @apply rounded-b;
             }
         }
+
+        #team-members {
+            @apply flex flex-col justify-center items-center bg-white rounded-sm w-10 h-10 m-0
+            text-primary-950 font-bold text-xs static;
+            text-shadow: none;
+
+            &::before {
+                content: 'PLAYERS';
+                font-size: 8px;
+            }
+        }
     }
 }
 
 #jemantix-navigation-tabs {
-    @apply fixed top-4 left-16 hidden gap-4 z-250;
+    @apply fixed top-2 left-14 hidden gap-4 z-250;
     
     &.jemantix-active {
         @apply flex;
     }
 
     div {
+        @apply flex gap-2;
+
         a {
             @apply flex px-4 justify-center items-center w-auto
-            shadow-none uppercase tracking-wider text-primary-950;
+            shadow-none uppercase tracking-wider opacity-100
+            bg-transparent;
             text-shadow: none;
-    
-            &:first-child {
-                @apply rounded-l rounded-r-none;
-            }
-    
-            &:last-child {
-                @apply rounded-r rounded-l-none;
-            }
 
             &.active {
-                @apply underline;
-            }
-
-            &.inactive {
-                @apply opacity-100;
+                @apply bg-white text-primary-950;
             }
         }
     }

@@ -2,8 +2,7 @@
 #cemantix-game {
 
     #cemantix-success {
-        @apply bg-green-700 shadow-none rounded-none m-0 p-4
-        rounded;
+        @apply bg-green-700 shadow-none m-0 p-4 rounded-sm border border-green-500;
         margin-bottom: 8px !important;
     }
 
@@ -18,7 +17,7 @@
         }
 
         input {
-            @apply h-10 px-4 m-0 rounded-none border border-white rounded-l;
+            @apply h-10 px-2 m-0 rounded-none border border-white rounded-l-sm;
             background-color: rgba(255, 255, 255, 0.05);
 
             &:focus-visible {
@@ -27,7 +26,7 @@
 
             &[type=submit] {
                 @apply uppercase cursor-pointer duration-300 border-l-0
-                rounded-l-none rounded-r;
+                rounded-l-none rounded-r-sm;
                 &:hover {
                     background-color: rgba(255, 255, 255, 0.2);
                 }
@@ -46,19 +45,46 @@
     }
 
     table#cemantix-guessable {
-        @apply flex flex-col m-0 w-full;
+        @apply flex flex-col m-0 w-full border border-white rounded-sm mt-2;
 
         thead {
             @apply shadow-none;
 
             th {
-                @apply p-2 text-left;
+                @apply px-2 h-7 text-left;
             }
         }
 
         tr {
-            @apply grid;
-            grid-template-columns: 48px 1fr 96px 48px 96px 128px;
+            @apply grid border-b border-white;
+            grid-template-columns: 48px 1fr 64px 48px 64px 128px;
+
+            &.separator {
+                @apply hidden;
+            }
+
+            &#cemantix-guessed {
+                td {
+                    @apply bg-white h-7 text-primary-950 !important;
+                    
+                    .progress-container {
+                        @apply flex  bg-transparent border border-primary-950 shadow-none h-4
+                        rounded !important;
+                        padding: 1px;
+        
+                        .progress-bar {
+                            @apply flex items-center justify-end text-white text-xs
+                            rounded-sm text-right;
+                            background-image: linear-gradient(to right, #182553, #182553) !important;
+                        }
+                    }
+                }
+            }
+
+            &.sink {
+                @apply shadow-none rounded-none;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
         }
 
         td {
