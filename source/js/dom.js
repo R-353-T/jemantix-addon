@@ -1,11 +1,14 @@
-const CEMANTIX_DOM = {
+export const CEMANTIX_DOM = {
     menu: () => document.querySelector('nav.menu'),
     tabs: () => document.querySelector('div#tabs'),
     cemantixButton: () => document.querySelector('a#cemantix'),
-    pedantixButton: () => document.querySelector('a#pedantix')
+    pedantixButton: () => document.querySelector('a#pedantix'),
+    cemantixSuccess: () => document.querySelector('#cemantix-success'),
+    pedantixSpanArray: () => [...document.querySelectorAll('#wiki span:not(.jemantix-found)')],
+    pedantixForm: () => document.querySelector('#pedantix-form')
 };
 
-const JEMANTIX_DOM = {
+export const JEMANTIX_DOM = {
     body: () => document.querySelector('body'),
     loader: () => document.querySelector('#jemantix-loader'),
     navigation: () => document.querySelector('#jemantix-navigation'),
@@ -13,9 +16,9 @@ const JEMANTIX_DOM = {
     navigationButton: () => document.querySelector('#jemantix-navigation-button')
 };
 
-/** ***********************************************/
+/** **********************************************/
 /** Loader                                      **/
-/** ***********************************************/
+/** **********************************************/
 
 export function addLoader() {
     const backdrop = document.createElement('div');
@@ -40,12 +43,12 @@ export function openLoader() {
 
 export function closeLoader() {
     JEMANTIX_DOM.loader().style.animation = '300ms fadeOut linear both';
-    setTimeout(() => { JEMANTIX_DOM.loader().classList.add('hidden'); }, 300);
+    setTimeout(() => { JEMANTIX_DOM.loader().style.display = 'none'; }, 300);
 }
 
-/** ***********************************************/
+/** **********************************************/
 /** Navigation                                  **/
-/** ***********************************************/
+/** **********************************************/
 
 export function toggleNavigation() {
     const button = JEMANTIX_DOM.navigationButton();

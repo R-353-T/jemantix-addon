@@ -1,6 +1,4 @@
-
 #cemantix-game {
-
     #cemantix-success {
         @apply bg-green-700 shadow-none m-0 p-4 rounded-sm border border-green-500;
         margin-bottom: 8px !important;
@@ -18,7 +16,7 @@
 
         input {
             @apply h-10 px-2 m-0 rounded-none border border-white rounded-l-sm;
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: transparent;
 
             &:focus-visible {
                 @apply outline-none;
@@ -34,7 +32,8 @@
         }
 
         #cemantix-error {
-            @apply w-full bg-yellow text-black m-0 px-4;
+            @apply w-full bg-yellow border border-yellow-200 text-black m-0 px-4
+            rounded-sm mt-2;
             line-height: 48px;
     
             i {
