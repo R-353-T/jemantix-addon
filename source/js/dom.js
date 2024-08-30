@@ -1,3 +1,6 @@
+
+export const IS_CHROME = () => window.navigator.userAgent.toLocaleLowerCase().includes('chrome');
+
 export const CEMANTIX_DOM = {
     menu: () => document.querySelector('nav.menu'),
     tabs: () => document.querySelector('div#tabs'),
@@ -21,6 +24,25 @@ export const JEMANTIX_DOM = {
     navigationTabs: () => document.querySelector('#jemantix-navigation-tabs'),
     navigationButton: () => document.querySelector('#jemantix-navigation-button')
 };
+
+/** **********************************************/
+/** Body                                        **/
+/** **********************************************/
+
+export function addBodyClass() {
+    JEMANTIX_DOM.body().classList.add('jemantix');
+}
+
+/** **********************************************/
+/** Chrome web accessible ressources            **/
+/** **********************************************/
+
+export function addWebAccessibleRessources() {
+    if (IS_CHROME()) {
+        const bgImageUrl = chrome.runtime.getURL('asset/icon/png/grid.png');
+        JEMANTIX_DOM.navigationButton().style.backgroundImage = `url("${bgImageUrl}")`;
+    }
+}
 
 /** **********************************************/
 /** Loader                                      **/
@@ -68,8 +90,17 @@ export function toggleNavigation() {
         setTimeout(() => {
             navigation.classList.remove('jemantix-active');
             tabs.classList.remove('jemantix-active');
+            if (IS_CHROME()) {
+                const gridBgImageUrl = chrome.runtime.getURL('asset/icon/png/grid.png');
+                button.style.backgroundImage = `url("${gridBgImageUrl}")`;
+            }
         }, 300);
     } else {
+        if (IS_CHROME()) {
+            const closeBgImageUrl = chrome.runtime.getURL('asset/icon/png/close.png');
+            button.style.backgroundImage = `url("${closeBgImageUrl}")`;
+        }
+
         navigation.style.animation = '300ms fadeInDown linear both';
         tabs.style.animation = '300ms fadeInLeft linear both';
         button.classList.add('jemantix-active');

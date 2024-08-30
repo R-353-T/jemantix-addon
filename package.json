@@ -5,6 +5,9 @@
   "main": "./source/index.js",
   "type": "module",
   "keywords": [
+    "firefox",
+    "chrome",
+    "addon",
     "cémantix",
     "pédantix"
   ],

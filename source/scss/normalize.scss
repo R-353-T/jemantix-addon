@@ -1,65 +1,65 @@
-body {
+body.jemantix {
     @apply pb-8;
 
     aside.aside,
     footer.footer {
         @apply hidden;
     }
-}
 
-#dialog-underlay {
-    @apply z-280 py-2;
-    background-color: rgba(24, 37, 83, 0.95);
-    animation: 300ms fadeIn linear both;
-}
-
-#dialog {
-    @apply flex flex-col m-0 mx-auto
-    shadow-none bg-transparent border-2 border-white rounded;
-
-    #dialog-close {
-        @apply text-transparent rounded w-10 h-10
-        flex justify-center items-center
-        bg-no-repeat border-2 border-white
-        fixed top-2 right-2
-        duration-300 hover:opacity-70;
-        background-image: url("asset/icon/png/close.png");
-        background-position: center center;
-        background-size: 32px;
+    #dialog-underlay {
+        @apply z-280 py-2;
+        background-color: rgba(24, 37, 83, 0.95);
+        animation: 300ms fadeIn linear both;
     }
 
-    .dialog-content {
-        @apply text-base text-start;
+    #dialog {
+        @apply flex flex-col m-0 mx-auto
+        shadow-none bg-transparent border-2 border-white rounded;
 
-        h3 {
-            @apply text-2xl;
+        #dialog-close {
+            @apply text-transparent rounded w-10 h-10
+            flex justify-center items-center
+            bg-no-repeat border-2 border-white
+            fixed top-2 right-2
+            duration-300 hover:opacity-70;
+            background-image: url("asset/icon/png/close.png");
+            background-position: center center;
+            background-size: 32px;
         }
 
-        input,
-        button {
-            @apply border-0 p-2 px-4 rounded-full duration-300 flex items-center;
-            background-color: rgba(255, 255, 255, 0.05);
-        }
+        .dialog-content {
+            @apply text-base text-start;
 
-        button {
-            @apply flex gap-4;
-        }
+            h3 {
+                @apply text-2xl;
+            }
 
-        input[type=submit]:hover,
-        button#signin:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
+            input,
+            button {
+                @apply border-0 p-2 px-4 rounded-full duration-300 flex items-center;
+                background-color: rgba(255, 255, 255, 0.05);
+            }
 
-        a {
-            @apply underline hover:no-underline text-primary-300;
+            button {
+                @apply flex gap-4;
+            }
+
+            input[type=submit]:hover,
+            button#signin:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            a {
+                @apply underline hover:no-underline text-primary-300;
+            }
         }
     }
-}
 
-article.main {
-    @apply flex absolute top-14 left-14 bottom-4 right-4 max-w-xl border border-white rounded overflow-auto bg-transparent m-0 p-2;
+    article.main {
+        @apply flex absolute top-14 left-14 bottom-4 right-4 max-w-xl border border-white rounded overflow-auto bg-transparent m-0 p-2;
 
-    #content {
-        @apply flex flex-col m-0 p-0 w-full shadow-none overflow-auto gap-2 rounded bg-primary-950;
+        #content {
+            @apply flex flex-col m-0 p-0 w-full shadow-none overflow-auto gap-2 rounded bg-primary-950;
+        }
     }
 }

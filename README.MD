@@ -1,4 +1,4 @@
-# JEMANTIX
+# JEMANTIX (ADDON)
 
 version: 3.0.1
 
