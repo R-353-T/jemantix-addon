@@ -16,19 +16,22 @@
 /** Internal dependencies                       **/
 /*************************************************/
 
-/** Global **/
+@import "./scss/v4/ubuntu_mono.scss";
 
-@import "./scss/animation.scss";
-@import "./scss/icon.scss";
-@import "./scss/font.scss";
-@import "./scss/normalize.scss";
-@import "./scss/base.scss";
+@import "./scss/v4/component/loader.scss";
+@import "./scss/v4/component/nickname.scss";
+@import "./scss/v4/component/navigation.scss";
 
-/** Component **/
+#jemantix {
+    @apply bg-primary-800 block;
 
-@import "./scss/loader.scss";
-@import "./scss/navigation.scss";
-@import "./scss/nickname.scss";
+    * {
+        font-family: 'ubuntu', sans-serif;
+    }
 
-@import "./scss/cemantix.scss";
-@import "./scss/pedantix.scss";
+    aside.aside,
+    article.main,
+    footer.footer {
+        @apply hidden;
+    }
+}

@@ -1,0 +1,39 @@
+#jemantix-nickname {
+    @apply fixed top-0 left-0 w-full h-screen bg-primary-800 hidden justify-center items-center;
+    z-index: 900;
+
+    &.j-activate {
+        @apply flex;
+        animation: fadeIn 300ms linear both;
+    }
+}
+
+#jemantix-nickname-body {
+    @apply flex flex-col p-4 justify-center items-center w-80
+    bg-primary-900 border-2 border-primary-950 rounded;
+}
+
+#jemantix-nickname-message {
+    @apply text-lg uppercase font-bold tracking-wider;
+}
+
+#jemantix-nickname-error {
+    @apply italic text-sm;
+}
+
+#jemantix-nickname-input {
+    @apply bg-primary-950 rounded border-none
+    duration-300 p-2 outline-none focus:bg-primary-800 w-full
+    my-2;
+}
+
+#jemantix-nickname-button {
+    @apply p-2 bg-primary-950 uppercase rounded w-full 
+    font-bold tracking-wider text-xs hover:opacity-50
+    mb-1;
+}
+
+#jemantix-nickname-close-button {
+    @apply p-2 bg-white text-primary-950 uppercase rounded w-full 
+    font-bold tracking-wider text-xs hover:opacity-50;
+}

@@ -1,3 +1,3 @@
-import { initialize } from './js/initiliaze.js';
+import initialize from './js/v4/init.js';
 
 document.addEventListener('DOMContentLoaded', initialize);

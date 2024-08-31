@@ -1,0 +1,31 @@
+
+@keyframes jemantix_loader_animation_rotate {
+    0% { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(360deg); }
+}
+
+#jemantix-loader {
+    @apply fixed top-0 left-0 w-full h-screen bg-primary-800 hidden justify-center items-center;
+    z-index:1000;
+
+    &.j-activate {
+        @apply flex;
+        animation: fadeIn 300ms linear both;
+    }
+}
+
+#jemantix-loader-body {
+    @apply flex p-4 items-center justify-center gap-4 w-80
+    bg-primary-900 border-2 border-primary-950 rounded;
+    animation: fadeIn 300ms linear both;
+    animation-delay: 300ms;
+}
+
+#jemantix-loader-spinner {
+    @apply w-6 h-6 border-2 border-transparent border-b-white rounded-full;
+    animation: 1s jemantix_loader_animation_rotate ease-in-out infinite;
+}
+
+#jemantix-loader-message {
+    @apply font-bold uppercase tracking-wider text-left text-xs;
+}

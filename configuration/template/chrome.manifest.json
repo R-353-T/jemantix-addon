@@ -24,9 +24,13 @@
         {
             "resources": [
                 "asset/icon/png/close.png",
-                "asset/icon/png/close-dark.png",
-                "asset/icon/png/grid.png",
-                "asset/icon/png/grid-dark.png",
+                "asset/icon/png/account.png",
+                "asset/icon/png/cloud.png",
+                "asset/icon/png/faq.png",
+                "asset/icon/png/help.png",
+                "asset/icon/png/history.png",
+                "asset/icon/png/trophy.png",
+                "asset/icon/png/info.png",
 
                 "asset/font/ubuntu_mono/ubuntumono-bold-italic.ttf",
                 "asset/font/ubuntu_mono/ubuntumono-bold.ttf",
