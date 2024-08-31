@@ -1,6 +1,7 @@
 #cemantix-game {
     #cemantix-success {
-        @apply bg-green-700 shadow-none m-0 p-4 rounded-sm border border-green-500;
+        @apply bg-green-700 shadow-none m-0 p-4 rounded-none border border-green-500 flex flex-col
+        text-sm;
         margin-bottom: 8px !important;
     }
 
@@ -15,7 +16,7 @@
         }
 
         input {
-            @apply h-10 px-2 m-0 rounded-none border border-white rounded-l-sm;
+            @apply h-10 px-2 m-0 rounded-none border border-white;
             background-color: transparent;
 
             &:focus-visible {
@@ -23,8 +24,7 @@
             }
 
             &[type=submit] {
-                @apply uppercase cursor-pointer duration-300 border-l-0
-                rounded-l-none rounded-r-sm;
+                @apply uppercase cursor-pointer duration-300 border-l-0;
                 &:hover {
                     background-color: rgba(255, 255, 255, 0.2);
                 }
@@ -44,7 +44,7 @@
     }
 
     table#cemantix-guessable {
-        @apply flex flex-col m-0 w-full border border-white rounded-sm mt-2;
+        @apply flex flex-col m-0 w-full border border-white mt-2;
 
         thead {
             @apply shadow-none;
@@ -124,7 +124,7 @@
             thead tr {
                 th,
                 td {
-                    @apply text-sm;
+                    @apply text-xs;
                 }
 
                 &#cemantix-guessed {
@@ -134,7 +134,7 @@
 
             tr {
                 @apply grid border-b border-white;
-                grid-template-columns: 24px 1fr 48px 24px 32px 96px;
+                grid-template-columns: 24px 1fr 48px 24px 32px 76px;
 
                 td {
                     @apply text-xs px-0 text-center;
@@ -149,5 +149,15 @@
                 }
             }
         }
+    }
+}
+
+#jemantix-cemantix-share {
+    @apply pt-4 flex flex-col border-t-2 border-green-500 gap-2 mt-2;
+
+    a,
+    button {
+        @apply bg-green-200 text-green-700 px-4 p-2 uppercase font-bold
+        hover:bg-green-100 duration-300 border border-green-500 text-center;
     }
 }

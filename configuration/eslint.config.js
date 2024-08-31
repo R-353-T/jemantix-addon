@@ -3,9 +3,6 @@ const ignores = [
     'configuration/**'
 ];
 
-/**
- * @
- */
 export default {
     ignores,
     languageOptions: {

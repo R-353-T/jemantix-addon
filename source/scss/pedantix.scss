@@ -1,7 +1,7 @@
 body.jemantix {
     #pedantix-game {
         #pedantix-success {
-            @apply bg-green-700 shadow-none m-0 p-4 rounded-sm border border-green-500 hidden;
+            @apply bg-green-700 shadow-none m-0 p-4 rounded-none border border-green-500 hidden;
             margin-bottom: 8px !important;
         }
 
@@ -20,7 +20,7 @@ body.jemantix {
             }
 
             input {
-                @apply h-10 px-2 m-0 rounded-none border border-white rounded-l-sm;
+                @apply h-10 px-2 m-0 rounded-none border border-white;
                 background-color: transparent;
 
                 &:focus-visible {
@@ -28,8 +28,7 @@ body.jemantix {
                 }
 
                 &[type=submit] {
-                    @apply uppercase cursor-pointer duration-300 border-l-0
-                    rounded-l-none rounded-r-sm;
+                    @apply uppercase cursor-pointer duration-300 border-l-0;
                     &:hover {
                         background-color: rgba(255, 255, 255, 0.2);
                     }
@@ -38,7 +37,7 @@ body.jemantix {
 
             #pedantix-error {
                 @apply w-full bg-yellow border border-yellow-200 text-black m-0 px-4
-                rounded-sm mt-2;
+                rounded-none mt-2;
                 line-height: 48px;
         
                 i {
@@ -49,7 +48,7 @@ body.jemantix {
         }
 
         #wiki {
-            @apply m-0 w-full border border-white rounded-sm mt-2 bg-primary-950 text-white shadow-none p-0;
+            @apply m-0 w-full border border-white rounded-none mt-2 bg-primary-950 text-white shadow-none p-0;
 
             h2 {
                 @apply border-b border-white p-4 text-xl !important;
@@ -60,7 +59,7 @@ body.jemantix {
             }
 
             span {
-                @apply shadow-none !important;
+                @apply shadow-none text-sm !important;
                 font-family: "ubuntu", sans-serif !important;
             }
 
@@ -75,7 +74,7 @@ body.jemantix {
     }
 
     #pedantix-guessable {
-        @apply flex flex-col m-0 w-full border border-white rounded-sm mb-2;
+        @apply flex flex-col m-0 w-full border border-white rounded-none mb-2;
 
         thead {
             @apply shadow-none bg-white text-primary-950 rounded-none;

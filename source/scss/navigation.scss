@@ -12,7 +12,8 @@
 #jemantix-navigation-button,
 #jemantix-navigation-tabs div a,
 #jemantix-navigation nav.menu a {
-    @apply w-10 h-10 duration-300 border border-white text-white rounded;
+    @apply w-10 h-10 duration-300 
+    border border-white text-white bg-primary-950;
 
     &:hover {
         @apply opacity-50;
@@ -20,7 +21,7 @@
 }
 
 #jemantix-navigation {
-    @apply fixed top-14 left-2 hidden gap-4 z-250;
+    @apply fixed top-12 left-2 hidden gap-4 z-250;
     animation: 300ms fadeInDown linear both;
 
     &.jemantix-active {
@@ -28,24 +29,24 @@
     }
 
     nav.menu {
-        @apply flex flex-col p-0 m-0 gap-0 gap-2;
+        @apply flex flex-col p-0 m-0 gap-0;
 
         a {
-            @apply m-0 flex justify-center items-center;
+            @apply m-0 flex justify-center items-center border-b-0;
             text-shadow: none;
 
             &:first-child {
-                @apply rounded-t;
+                @apply border-t-0;
             }
 
             &#cloud-button {
-                @apply rounded-b;
+                @apply border-b;
             }
         }
 
         #team-members {
-            @apply flex flex-col justify-center items-center bg-white rounded-sm w-10 h-10 m-0
-            text-primary-950 font-bold text-xs static;
+            @apply flex flex-col justify-center items-center bg-white rounded-full w-10 h-10 m-0
+            text-primary-950 font-bold text-xs static mt-2;
             text-shadow: none;
 
             &::before {
@@ -57,36 +58,41 @@
 }
 
 #jemantix-navigation-tabs {
-    @apply fixed top-2 left-14 hidden gap-2 z-250;
+    @apply fixed top-2 left-12 hidden gap-0 z-250;
     
     &.jemantix-active {
         @apply flex;
     }
 
     div {
-        @apply flex gap-2;
+        @apply flex gap-0;
 
         a {
             @apply flex px-2 justify-center items-center w-auto
             shadow-none uppercase tracking-wider opacity-100
-            bg-transparent text-xs;
+            bg-primary-950 text-xs rounded-none;
             text-shadow: none;
 
             &.active {
-                @apply bg-white text-primary-950;
+                @apply bg-white text-primary-900;
             }
         }
     }
 
     .yesterday {
         @apply flex justify-center items-center
-        h-10 text-primary-950 bg-white m-0 rounded shadow-none p-0 px-1 max-w-36 flex-wrap
-        font-bold gap-0 uppercase;
+        h-10 text-white bg-primary-900 m-0 shadow-none p-0 px-1 max-w-32 flex-wrap
+        font-bold gap-0 uppercase rounded ml-1;
         font-size: 9px;
         background-image:none;
 
         a {
-            @apply h-auto border-primary-950 text-primary-950 no-underline px-1 text-sm;
+            @apply h-auto bg-primary-950 text-white no-underline 
+            px-1 text-xs rounded border-0;
+
+            u {
+                @apply no-underline;
+            }
         }
     }
 }

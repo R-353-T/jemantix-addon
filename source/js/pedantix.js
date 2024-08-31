@@ -48,7 +48,7 @@ export function pedantixSpanFound(span) {
         rbgEqual(getRgbVals(span.style.backgroundColor), foundRgbBackgroundColor) &&
         rbgEqual(getRgbVals(span.style.color), foundRgbColor)
     ) {
-        console.log('[found]', span);
+        // console.log('[found]', span);
         Object.assign(span.style, newStyle);
         span.classList.add('jemantix-found');
     }
@@ -66,7 +66,7 @@ export function pedantixSpanFind(span) {
 
     if (span.style.backgroundColor.length &&
         rbgEqual(getRgbVals(span.style.backgroundColor), targetedRgbBackgroundColor)) {
-        console.log('[find]', span);
+        // console.log('[find]', span);
         Object.assign(span.style, newStyle);
     }
 }
@@ -99,7 +99,7 @@ export function pedantixHidden(span) {
 
 export function refreshPedantixSpanStyle() {
     const spanArray = CEMANTIX_DOM.pedantixSpanArray();
-    console.log(`${spanArray.length} updated`);
+    // console.log(`${spanArray.length} updated`);
 
     /** @todo fix low connection issue (wait latest XHR) */
 

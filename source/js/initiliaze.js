@@ -1,5 +1,6 @@
-import { addBodyClass, addLoader, addNavigation, addWebAccessibleRessources, CEMANTIX_DOM, closeLoader, setupPedantix } from './dom.js';
-import { fixCemantixSuccess } from './patch.js';
+import { shareCemantixVictory } from './cemantix.js';
+import { CEMANTIX_DOM } from './dom.js';
+import { addBodyClass, addLoader, addNavigation, addWebAccessibleRessources, closeLoader, setupPedantix, fixCemantixSuccess, selectNicknameSelection } from './functions.js';
 import { refreshPedantixSpanStyle } from './pedantix.js';
 
 export async function initialize() {
@@ -12,12 +13,16 @@ export async function initialize() {
     addLoader();
     addNavigation();
     setupPedantix();
-
     addWebAccessibleRessources();
 
-    /** PEDANTIX EVENTS **/
+    selectNicknameSelection();
+
+    /** PEDANTIX **/
     CEMANTIX_DOM.pedantixButton().addEventListener('click', refreshPedantixSpanStyle);
     CEMANTIX_DOM.pedantixForm().addEventListener('submit', refreshPedantixSpanStyle);
+
+    /** CEMANTIX **/
+    shareCemantixVictory();
 
     /** FIXES **/
     fixCemantixSuccess();
