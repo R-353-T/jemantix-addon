@@ -1,0 +1,48 @@
+#jemantix {
+    
+    #dialog-underlay {
+        @apply bg-primary-800;
+        animation: fadeIn 300ms linear both;
+        z-index: 900;
+
+        #dialog {
+            @apply bg-primary-900 border-2 border-primary-950 flex flex-col gap-4
+            rounded shadow-none !important;
+    
+            #dialog-close {
+                @apply text-transparent w-9 h-9 rounded-none bg-no-repeat hover:opacity-50;
+                font-size: 0px;
+                background-image: url("asset/icon/png/close.png");
+                background-position: center center;
+                background-size: 32px;
+            }
+    
+            .dialog-content {
+                @apply text-base text-start p-4;
+    
+                h3 {
+                    @apply text-3xl mb-4;
+                }
+    
+                input,
+                button {
+                    @apply bg-primary-950 rounded border-none
+                    duration-300 p-2 outline-none focus:bg-primary-800 w-full
+                    my-2;
+                }
+    
+                button {
+                    @apply flex gap-4 hover:opacity-50 mx-0 my-2 px-4 py-2;
+                }
+
+                p {
+                    @apply text-left text-sm mb-4;
+                }
+    
+                a {
+                    @apply underline hover:no-underline text-primary-300;
+                }
+            }
+        }
+    }
+}

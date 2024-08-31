@@ -37,12 +37,14 @@ export const JDOM = {
     body: () => dqs('body'),
     menuElements: () => dqsa('nav.menu a'),
     pedantix: {
-        yesterday: () => document.querySelector('#pedantix-summary .yesterday'),
-        tab: () => document.querySelector('#tabs #pedantix')
+        yesterday: () => dqs('#pedantix-summary .yesterday'),
+        tab: () => dqs('#tabs #pedantix'),
+        game: () => dqs('#pedantix-game')
     },
     cemantix: {
-        yesterday: () => document.querySelector('#cemantix-summary .yesterday'),
-        tab: () => document.querySelector('#tabs #cemantix')
+        yesterday: () => dqs('#cemantix-summary .yesterday'),
+        tab: () => dqs('#tabs #cemantix'),
+        game: () => dqs('#cemantix-game')
     }
 };
 

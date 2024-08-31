@@ -1,0 +1,106 @@
+#jemantix {
+    .success {
+        @apply rounded-none shadow-none m-0 p-4
+        text-left text-sm bg-transparent
+        bg-gradient-to-b from-green-700 to-transparent;
+        animation: fadeInDown 1200ms ease-in-out both;
+        z-index: 400;
+        margin-bottom: 0px !important;
+    }
+
+
+    #cemantix-form,
+    #pedantix-form {
+        @apply flex py-1 p-4 gap-4 m-0 bg-transparent rounded-none;
+
+        .guessbox {
+            @apply flex-grow m-0;
+            input {
+                @apply w-full;
+            }
+        }
+
+        input {
+            @apply bg-primary-950 rounded border-none
+            duration-300 p-2 outline-none focus:bg-primary-800 m-0;
+        }
+
+        .error {
+            @apply w-full m-0 text-sm;
+
+            i {
+                @apply text-red not-italic text-base uppercase;
+            }
+        }
+    }
+
+    /** CEMANTIX **/
+    #cemantix-game {
+        @apply flex flex-col;
+    
+        #cemantix-guessable {
+            @apply flex flex-col m-0 mx-4;
+            width: calc(100% - 32px);
+
+            thead {
+                @apply shadow-none rounded bg-primary-950 mb-2;
+                
+                td,
+                th {
+                    @apply text-xs py-2 !important;
+                }
+
+                td {
+                    @apply bg-primary-800;
+
+                    &:first-child { @apply rounded-bl; }
+                    &:last-child { @apply rounded-br; }
+                }
+            }
+
+            tbody {
+                @apply flex flex-col gap-1;
+            }
+
+            tr {
+                @apply grid;
+                grid-template-columns: 24px 1fr 48px 24px 32px 86px;
+
+                &.separator {
+                    @apply hidden;
+                }
+
+                th,
+                td {
+                    @apply flex text-xs font-bold p-0 items-center px-1;
+
+                    &.number,
+                    &.emoji {
+                        @apply text-center justify-center p-0;
+                    }
+
+                    &.word {
+                        @apply text-sm;
+                    }
+                }
+
+                &.sink {
+                    @apply shadow-none rounded-none;
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+
+            .progress-container {
+                @apply flex bg-transparent border border-white shadow-none h-4
+                rounded mx-2 !important;
+                padding: 1px;
+
+                .progress-bar {
+                    @apply flex items-center justify-end text-primary-950 text-xs
+                    rounded-sm text-right;
+                    background-image: linear-gradient(140deg, #aaaaaa, #ffffff) !important;
+                }
+            }
+        }
+    }
+}

@@ -8,7 +8,6 @@ class Navigation {
         JDOM.body().appendChild(this._buildNavigation());
 
         for (const id in JBACKGROUNDS.navigation) {
-            console.log(id, document.querySelector(`#${id}`));
             applyBackground(
                 document.querySelector(`#${id}`),
                 JBACKGROUNDS.navigation[id]

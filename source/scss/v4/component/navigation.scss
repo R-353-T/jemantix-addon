@@ -1,9 +1,11 @@
 #jemantix-navigation {
     @apply flex flex-col bg-primary-900;
+    z-index: 700;
 }
 
 #jemantix-navigation-header {
     @apply flex bg-primary-950 p-2 gap-2;
+    z-index: 700;
 
     .yesterday {
         @apply shadow-none rounded-none border-0
@@ -22,7 +24,8 @@
 }
 
 #jemantix-navigation-content {
-    @apply flex z-0 items-center;
+    @apply flex z-0 items-center bg-primary-900;
+    z-index: 700;
     img { @apply hidden; }
 
     a {

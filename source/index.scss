@@ -21,9 +21,11 @@
 @import "./scss/v4/component/loader.scss";
 @import "./scss/v4/component/nickname.scss";
 @import "./scss/v4/component/navigation.scss";
+@import "./scss/v4/component/dialog.scss";
+@import "./scss/v4/component/game.scss";
 
 #jemantix {
-    @apply bg-primary-800 block;
+    @apply bg-primary-900 block;
 
     * {
         font-family: 'ubuntu', sans-serif;
