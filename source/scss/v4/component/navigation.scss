@@ -24,12 +24,13 @@
 }
 
 #jemantix-navigation-content {
-    @apply flex z-0 items-center bg-primary-900;
+    @apply flex z-0 items-center bg-primary-800;
     z-index: 700;
+
     img { @apply hidden; }
 
     a {
-        @apply bg-primary-900 text-white text-sm tracking-wider uppercase
+        @apply bg-primary-800 text-white text-sm tracking-wider uppercase
         font-bold p-2 px-4 hover:opacity-50;
 
         &.icon {
@@ -53,7 +54,7 @@
         tab-size:1;
 
         &.active {
-            @apply bg-primary-800;
+            @apply bg-primary-900;
         }
     }
 }

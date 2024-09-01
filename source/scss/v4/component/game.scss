@@ -6,12 +6,22 @@
         animation: fadeInDown 1200ms ease-in-out both;
         z-index: 400;
         margin-bottom: 0px !important;
+
+        #jemantix-cemantix-leaderboard-button,
+        #jemantix-pedantix-leaderboard-button {
+            @apply flex text-white flex-col mt-4
+            bg-green px-4 py-2 uppercase rounded font-bold text-base
+            hover:bg-green-500;
+        }
     }
 
 
     #cemantix-form,
     #pedantix-form {
-        @apply flex py-1 p-4 gap-4 m-0 bg-transparent rounded-none;
+        @apply flex p-4 gap-4 m-0 bg-transparent rounded-none pt-4 pb-0;
+        background-color: rgb(31, 59, 137) !important;
+        top: 0 !important;
+        box-shadow: none !important;
 
         .guessbox {
             @apply flex-grow m-0;
@@ -34,7 +44,10 @@
         }
     }
 
-    /** CEMANTIX **/
+    /*************************************/
+    /** CEMANTIX                        **/
+    /*************************************/
+    
     #cemantix-game {
         @apply flex flex-col;
     
@@ -99,6 +112,42 @@
                     @apply flex items-center justify-end text-primary-950 text-xs
                     rounded-sm text-right;
                     background-image: linear-gradient(140deg, #aaaaaa, #ffffff) !important;
+                }
+            }
+        }
+    }
+
+    /*************************************/
+    /** PEDANTIX                        **/
+    /*************************************/
+
+    #pedantix-game {
+        @apply flex flex-col;
+
+        #wiki {
+            @apply shadow-none rounded-none bg-primary-900 pt-0 p-4 pb-8 m-0 text-left
+            text-white;
+
+            h2 {
+                @apply mb-4;
+
+                span.w {
+                    @apply text-4xl shadow-none bg-primary-800;
+                }
+            }
+
+            #article {
+                span.w {
+                    @apply text-base bg-primary-800;
+                    box-shadow: none !important;
+                    transition-delay: 300ms !important;
+                    transition-duration: 600ms !important;
+                    transition-timing-function: ease-in;
+                }
+
+                p {
+                    @apply mb-4;
+                    line-height: 32px;
                 }
             }
         }

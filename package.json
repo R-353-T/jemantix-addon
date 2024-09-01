@@ -1,6 +1,6 @@
 {
   "name": "jemantix",
-  "version": "3.0.2",
+  "version": "4.2.0",
   "description": "(Firfox & Chrome Add-on) Cémantix/Pédantix ergonomics and features upgrade (https://cemantix.certitudes.org/)",
   "main": "./source/index.js",
   "type": "module",

@@ -39,5 +39,9 @@
             ],
             "matches": [ "https://*.certitudes.org/*" ]
         }
+    ],
+    "permissions": [
+      "https://www.jemantix.r353t.net/",
+      "https://jemantix.r353t.net/"
     ]
 }

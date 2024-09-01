@@ -1,6 +1,6 @@
 # JEMANTIX (ADDON)
 
-version: 3.0.2
+version: 4.2.0
 
 ## PREREQUISITE
 

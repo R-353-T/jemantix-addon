@@ -1,4 +1,5 @@
 import { JDOM, JIDS } from '../dom.js';
+import { generateUID } from '../utils.js';
 
 class Game {
     init() {
@@ -30,8 +31,13 @@ class Game {
         // Input
         this.nicknameInput = document.createElement('input');
         this.nicknameInput.id = JIDS.nicknameInput;
+
         const currentNickname = this.getNickname();
-        this.nicknameInput.value = currentNickname !== null ? currentNickname : '';
+        if (currentNickname === null || currentNickname.length === 0) {
+            this.setNickname(generateUID());
+        }
+
+        this.nicknameInput.value = this.getNickname();
         this.nicknameBody.appendChild(this.nicknameInput);
 
         // Button

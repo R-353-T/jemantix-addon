@@ -39,5 +39,9 @@
         "asset/font/ubuntu_mono/ubuntumono-bold.ttf",
         "asset/font/ubuntu_mono/ubuntumono-italic.ttf",
         "asset/font/ubuntu_mono/ubuntumono-regular.ttf"
+    ],
+    "permissions": [
+      "https://www.jemantix.r353t.net/",
+      "https://jemantix.r353t.net/"
     ]
 }

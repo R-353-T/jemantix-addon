@@ -30,7 +30,10 @@ export const JIDS = {
     navigationHeader: 'jemantix-navigation-header',
     navigationContent: 'jemantix-navigation-content',
     navigationProfileButton: 'jemantix-profile',
-    navigationLeaderboardButton: 'jemantix-leaderboard'
+    navigationLeaderboardButton: 'jemantix-leaderboard',
+
+    cemantixLeaderboardButton: 'jemantix-cemantix-leaderboard-button',
+    pedantixLeaderboardButton: 'jemantix-pedantix-leaderboard-button'
 };
 
 export const JDOM = {
@@ -39,12 +42,19 @@ export const JDOM = {
     pedantix: {
         yesterday: () => dqs('#pedantix-summary .yesterday'),
         tab: () => dqs('#tabs #pedantix'),
-        game: () => dqs('#pedantix-game')
+        game: () => dqs('#pedantix-game'),
+        success: () => dqs('#pedantix-success'),
+        tries: () => dqs('#pedantix-tries'),
+        form: () => dqs('#pedantix-form'),
+        wikiSpans: () => dqsa('#wiki span:not(.jemantix-found)')
     },
     cemantix: {
         yesterday: () => dqs('#cemantix-summary .yesterday'),
         tab: () => dqs('#tabs #cemantix'),
-        game: () => dqs('#cemantix-game')
+        game: () => dqs('#cemantix-game'),
+        success: () => dqs('#cemantix-success'),
+        tries: () => dqs('#cemantix-tries'),
+        form: () => dqs('#cemantix-form')
     }
 };
 

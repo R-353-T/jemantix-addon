@@ -1,9 +1,7 @@
 
 const ManifestConfiguration = {
-
     description: 'Cémantix/Pédantix ergonomics and features upgrade (https://cemantix.certitudes.org/)',
-    version: '3.0.2'
-
+    version: '4.2.0'
 };
 
 export default ManifestConfiguration;
