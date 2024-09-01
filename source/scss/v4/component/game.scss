@@ -151,5 +151,45 @@
                 }
             }
         }
+
+        #pedantix-guessable {
+            @apply flex flex-col m-0 mx-4;
+            width: calc(100% - 32px);
+
+            thead {
+                @apply shadow-none rounded bg-primary-950 mb-2;
+                background-image: none;
+                
+                td,
+                th {
+                    @apply text-xs py-2 !important;
+                }
+
+                td {
+                    @apply bg-primary-800;
+
+                    &:first-child { @apply rounded-bl; }
+                    &:last-child { @apply rounded-br; }
+                }
+            }
+
+            tbody {
+                @apply flex flex-col gap-1;
+            }
+
+            tr {
+                @apply grid;
+                grid-template-columns: 64px 1fr 64px;
+
+                th,
+                td {
+                    @apply flex text-sm font-bold p-0 items-center px-1;
+
+                    &:first-child {
+                        @apply text-center justify-center;
+                    }
+                }
+            }
+        }
     }
 }

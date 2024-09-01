@@ -46,7 +46,8 @@ export const JDOM = {
         success: () => dqs('#pedantix-success'),
         tries: () => dqs('#pedantix-tries'),
         form: () => dqs('#pedantix-form'),
-        wikiSpans: () => dqsa('#wiki span:not(.jemantix-found)')
+        wikiSpans: () => dqsa('#wiki span:not(.jemantix-found)'),
+        guessedTable: () => dqs('#pedantix-guessable')
     },
     cemantix: {
         yesterday: () => dqs('#cemantix-summary .yesterday'),

@@ -5,7 +5,9 @@ import game from './game.js';
 class Pedantix {
 
     init() {
-        JDOM.body().appendChild(this._buildPedantix());
+        const pedantix = this._buildPedantix();
+        pedantix.insertBefore(JDOM.pedantix.guessedTable(), JDOM.pedantix.form());
+        JDOM.body().appendChild(pedantix);
 
         JDOM.pedantix.form().addEventListener('submit', this.onWordSubmittion.bind(this));
 
@@ -64,11 +66,12 @@ class Pedantix {
         if (last === undefined || last === null) {
             return true;
         } else {
-            const midnight = new Date(Date.now());
-            midnight.setHours(12);
-            midnight.setMinutes(0);
-            midnight.setSeconds(0);
-            return midnight.getTime() > new Date(parseInt(last)).getTime();
+            const noon = new Date(Date.now());
+            noon.setHours(12);
+            noon.setMinutes(0);
+            noon.setSeconds(0);
+            return noon.getTime() > new Date(parseInt(last)).getTime() &&
+            new Date(Date.now()) > noon.getTime();
         }
     }
 
