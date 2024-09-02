@@ -18,7 +18,7 @@
 
     #cemantix-form,
     #pedantix-form {
-        @apply flex p-4 gap-4 m-0 bg-transparent rounded-none pt-4 pb-0;
+        @apply flex py-4 gap-4 m-0 bg-transparent rounded-none px-0 pb-0 max-w-3xl mx-auto w-full;
         background-color: rgb(31, 59, 137) !important;
         top: 0 !important;
         box-shadow: none !important;
@@ -33,6 +33,10 @@
         input {
             @apply bg-primary-950 rounded border-none
             duration-300 p-2 outline-none focus:bg-primary-800 m-0;
+
+            &[type=submit] {
+                @apply uppercase;
+            }
         }
 
         .error {
@@ -52,7 +56,7 @@
         @apply flex flex-col;
     
         #cemantix-guessable {
-            @apply flex flex-col m-0 mx-4;
+            @apply flex flex-col m-0 max-w-3xl mx-auto;
             width: calc(100% - 32px);
 
             thead {
@@ -93,7 +97,7 @@
                     }
 
                     &.word {
-                        @apply text-sm;
+                        @apply text-base;
                     }
                 }
 
@@ -125,20 +129,20 @@
         @apply flex flex-col;
 
         #wiki {
-            @apply shadow-none rounded-none bg-primary-900 pt-0 p-4 pb-8 m-0 text-left
-            text-white;
+            @apply shadow-none rounded-none bg-primary-900 pt-0 px-0 pb-8 m-0 text-left
+            text-white max-w-3xl mx-auto w-full;
 
             h2 {
                 @apply mb-4;
 
                 span.w {
-                    @apply text-4xl shadow-none bg-primary-800;
+                    @apply text-4xl shadow-none bg-primary-700;
                 }
             }
 
             #article {
                 span.w {
-                    @apply text-base bg-primary-800;
+                    @apply text-base bg-primary-700;
                     box-shadow: none !important;
                     transition-delay: 300ms !important;
                     transition-duration: 600ms !important;
@@ -153,7 +157,7 @@
         }
 
         #pedantix-guessable {
-            @apply flex flex-col m-0 mx-4;
+            @apply flex flex-col m-0 mt-4 max-w-3xl mx-auto w-full;
             width: calc(100% - 32px);
 
             thead {
@@ -192,4 +196,31 @@
             }
         }
     }
+}
+
+
+
+@media (max-width: 768px) {
+
+    #jemantix #cemantix-form,
+    #jemantix #pedantix-form {
+        @apply mx-4;
+        width: calc(100% - 32px);
+
+
+    }
+
+    #cemantix-game #cemantix-guessable tr td.word {
+        @apply text-sm !important;
+    }
+
+    #pedantix-game #wiki {
+        @apply px-4 !important;
+    }
+
+    #pedantix-guessable {
+        @apply mx-4 !important;
+        width: calc(100% - 32px);
+    }
+
 }

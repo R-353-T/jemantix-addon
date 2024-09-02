@@ -88,6 +88,7 @@ class Pedantix {
         if (span.style.boxShadow === 'none' && span.innerText.length > 0) {
             span.style.color = 'white';
             span.classList.add('jemantix-found');
+            span.style.fontStyle = 'normal';
         }
     }
 
@@ -99,6 +100,7 @@ class Pedantix {
         const bgRgb = getRgbVals(span.style.backgroundColor);
         if (equalRgbs(bgRgb, expectedBgRgb)) {
             span.style.backgroundColor = '#548506';
+            span.style.fontStyle = 'normal';
         }
     }
 
