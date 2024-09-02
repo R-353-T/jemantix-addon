@@ -1,6 +1,6 @@
 # JEMANTIX (ADDON)
 
-version: 4.2.2
+version: 4.2.2 - [Official Website](https://www.jemantix.r353t.net/) - [Firefox](https://addons.mozilla.org/fr/firefox/addon/jemantix) - [Chrome](https://chromewebstore.google.com/detail/jemantix/klmgknmplonlpacgdaafnjpekdfcchjd)
 
 ## PREREQUISITE
 
@@ -15,7 +15,3 @@ version: 4.2.2
 
 
 Ps: you can also build on changes with `npm run dev` <3
-
-## DEPENDENCIES
-
-Webpack, Tailwind.css, Animate.css
